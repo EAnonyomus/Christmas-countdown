@@ -9,7 +9,7 @@ body{
     justify-content: center;
     margin: 0;
     height: 100%;
-
+   
     overflow: hidden;
 }
 
@@ -42,7 +42,7 @@ h1{
 }
 
 span{
-    font-size: 4vw; /*70px*/
+    font-size: 5vw; /*70px*/
     color: aqua;
     
     margin-top: 0px;
@@ -62,12 +62,6 @@ span{
     animation: fall linear infinite;
 }
 
-/* Keyframes for snowflakes falling down */
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
-}
 
 h2{
     color: white;
@@ -93,10 +87,25 @@ h3{
 }
 
 @media screen and (max-width: 800px) {
+    
+    body{
+        margin-left: 100px;
+        margin-right: 100px;
+        background-attachment: scroll; /* Remove fixed attachment for better performance on mobile */
+        background-size: cover;
+        min-height: 100vh;
+        justify-content: center;
+        
+    }
+    
+    .snowflake{
+        font-size: min(3vw, 3px);
+    }
     .box{
         min-height: 50px ;
         border-radius: 0px;
         margin-top: 20px;
+        
     }
     h1 {
         font-size: 7vw; /* Larger font for smaller screens */
@@ -126,5 +135,11 @@ h3{
    
     #gift-text {
         font-size: 7vw; /* Larger gift text for mobile */
+    }
+}
+/* Keyframes for snowflakes falling down */
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
     }
 }
