@@ -1,18 +1,22 @@
 body{
     background-image: url("image2.jpg");
+    
     background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     display:flex;
     justify-content: center;
     margin: 0;
+    height: 100%;
 
     overflow: hidden;
 }
 
 .box{
     position: relative;
-    width: 1200px;
-    background: rgba(255, 0, 0, 0);
+    width: 100%;
+    background: rgba(153, 0, 0, 0);
     border-radius: 100px;
     display: flex;
     flex-direction: column;
@@ -27,18 +31,20 @@ h1{
     margin-left: 200px;
     margin-right: 200px;
     text-shadow: 10px 10px 20px rgb(255, 255, 255);
-    font-size: 70px;
+    font-size: 5vw; /*70px*/
     color: rgb(255, 9, 9);
     font-weight: 1000;
     background-color: #fdfdfd00;
     border-radius: 10px;
     display:flex;
+    white-space: nowrap;
     justify-content: center;
 }
 
 span{
-    font-size: 70px;
+    font-size: 4vw; /*70px*/
     color: aqua;
+    
     margin-top: 0px;
     font-family: cursive;
     font-weight: 800;
@@ -67,7 +73,7 @@ h2{
     color: white;
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 2vw; /*30px*/
 }
 
 h3{
@@ -75,13 +81,50 @@ h3{
 
     display: flex;
     justify-content: center;
-    font-size: 60px;
+    font-size: 5vw; /*60px*/
     margin-top: 10px;
 }
 
 #gift-text{
     color : rgb(22, 214, 22);
     display:none;
-    font-size: 50px;
+    font-size: 6vw;
     
+}
+
+@media screen and (max-width: 800px) {
+    .box{
+        min-height: 50px ;
+        border-radius: 0px;
+        margin-top: 20px;
+    }
+    h1 {
+        font-size: 7vw; /* Larger font for smaller screens */
+        margin-top: 50px; /* Reduce top margin on mobile */
+        white-space: nowrap;
+        min-height: 30px;
+        margin-top: 100px;
+        border-radius: 0px;
+    }
+
+    span {
+        text-shadow: 0 0 40px #ffffff;
+        font-size: 6vw; /* Larger font for better readability */
+    }
+
+    h2 {
+        
+        margin-top: 20px;
+        font-size: 4vw; /* Adjusted size for mobile */
+    }
+
+    h3 {
+        margin-top: 10px;
+        font-size: 8vw; /* Larger text for the heart on mobile */
+    }
+
+   
+    #gift-text {
+        font-size: 7vw; /* Larger gift text for mobile */
+    }
 }
