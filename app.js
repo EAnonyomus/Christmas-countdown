@@ -27,7 +27,7 @@ function time() {
 
    
     span.textContent =
-        d.toString().padStart(3, '0') + " days " + 
+        d.toString().padStart(2, '0') + " days " + 
         h.toString().padStart(2, '0') + " hours " + 
         m.toString().padStart(2, '0') + " min " + 
         s.toString().padStart(2, '0') + " sec ";
