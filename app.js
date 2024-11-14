@@ -7,7 +7,7 @@ function time() {
     const day = hour * 24;
 
     var present = new Date();
-    var christmas_day = new Date(present.getFullYear(), 11, 24,23); // Current year's Christmas
+    var christmas_day = new Date(present.getFullYear(), 11, 24,24); // Current year's Christmas
 
     // Check if Christmas has passed this year
     if (present.getMonth() == 11 && present.getDate() > 25) {
